@@ -21,10 +21,11 @@ DOJO Nº 1
 unsigned long tiempo1 = 0;
 unsigned long tiempo2 = 0;
 unsigned long lapseTime = 0;
-int prendido_alto = 400;
-int apagado_alto = 600;
-int prendido_bajo = 1000;
-int apagado_bajo = 1000;
+
+int prendido_alto = 400; //milisegundos sonido alto encendido
+int apagado_alto = 600;  //milisegundos sonido alto apagado
+int prendido_bajo = 1000;//milisegundos sonido bajo encendido
+int apagado_bajo = 1000; //milisegundos sonido bajo apagado
 
 #define LED1 13
 #define LED2 12
@@ -56,13 +57,10 @@ Declaración de función changeStatusDelay() :
  	2 = sonido alto c/ 1 seg
     1 = sonido bajo c/ 2 seg
     0 = sin sonido
- -ledStatus: status inical de los dos leds (primeros dos parámetros)
-   0-OFF  
-   1-ON 
+
  -timer:
-   ( > 0): tiempo dado en milisegundos en el que el led se
-   queda en el ledStatus definido, luego de ese lapso cambia al status opuesto.
-   ( == 0): status fijo al definido en ledStatus
+   tiempo dado en milisegundos en el que los leds permanecen encendidos
+
 */
 
 
@@ -142,9 +140,7 @@ void changeStatusDelay(int nombreLed1,
 
 void loop()
 {
-  changeStatusDelay(LED1,LED2, 2, 5000); // LEDS ROJOS 30s
+  changeStatusDelay(LED1,LED2, 2, 30000); // LEDS ROJOS 30s
   changeStatusDelay(LED3,LED4, 1, 5000); // LEDS AMARILLOS 5s
-  changeStatusDelay(LED5,LED6, 0, 5000); // LEDS VERDES 45s
-
-  
+  changeStatusDelay(LED5,LED6, 0, 45000); // LEDS VERDES 45s
 }
