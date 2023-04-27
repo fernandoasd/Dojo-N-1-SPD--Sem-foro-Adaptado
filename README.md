@@ -4,7 +4,7 @@ Prototipo de semáforo con indicación sonora para personas no videntes realizad
 
 ![Imagen no encontrada](./img/ArduinoTinkercad.jpg "banner Intercad")
 
-### Autores ✒️
+## Autores ✒️
 ***
 * **Franco Mendieta** 
 * **Fernando Malinowski** 
@@ -121,8 +121,8 @@ void changeStatusDelay(int nombreLed1,
   }
  ~~~
 
-## Explicación Función principal.
-* * * 
+# Explicación de la Función principal.
+
 ## Parámetros de la función:
  ~~~ C
  void changeStatusDelay(int nombreLed1,
@@ -164,7 +164,7 @@ milisegundos en el que el sonido bajo esta apagado
 ##### Obs: Si se quieren modificar estos tiempos, se debe modificar la función (para este pequeño proyecto no es necesario parametrizarlos).  
 
 
-### Cuerpo de la función:
+## Cuerpo de la función:
 ~~~ C
   digitalWrite(nombreLed1, 1);
   digitalWrite(nombreLed2, 1);
